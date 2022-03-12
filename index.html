@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p8_js_selectors</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+            height: auto;
+
+        }
+        .caixa2 img:hover{
+           animation-name: transparencia;
+           animation-duration: 1s ;
+           animation-fill-mode: forwards;
+        }
+        body{
+            background-color: white;
+
+        }
+        .container{
+            width: 540px;
+            overflow: auto;
+            margin: 40px auto;
+        }
+        .on{
+            position: absolute;
+            padding: auto;
+            z-index: 10;
+        }
+        .off{
+            z-index: 10;
+            margin: auto;
+            display: flex;
+            position: relative;
+            padding: auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        //$(".btn2").hide();
+        //$("#btn1").hide();
+        //$("p").hide();
+
+        /*$(".btn2").click(function(){
+            $(this).hide();
+        });*/  
+        //$("img").hide();
+       
+        $("#on") .hide();
+        $("#off").click (function(){
+            $("#off") .hide();
+            $("#on") .show();
+            });
+        $("#on").click (function(){
+            $("#on") .hide();
+            $("#off") .show();
+        });
+       
+     
+     });
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img id="on" src="img/boton-on.gif" alt="on">
+        <img id="off" src="img/boton-off.gif" alt="">
+    </div>
+</body>
+</html>
+
+
